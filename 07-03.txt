@@ -1,0 +1,14 @@
+position은 vector 형태로 표현 
+vector 선언해야됨 Vector3 = new Vector3(,,);
+
+public 은 클래스 외에서도 사용가능
+private는 클래스 내부에서만 사용
+
+Update 와 LateUpdate의 차이
+Update는 프레임마다 갱신하는거 = 호출 주기가 일정하지 않음 LateUpdate는 Update끝나고 마지막에 한번만 호출됨 주로 카메라 이동에 쓰인다.
+그외 FixedUpdate 호출간격이 일정하게 보장 주로 물리 계산 및 업데이트 에 사용된다. Rigidbody 컴포넌트에서 사용하면 더 정확한 물리계산이 가능하다고 한다.
+
+transform.Translate(Vector3.forward * Time.deltaTime) 앞으로가기
+transform.Rotate(Vector3.up, turnSpeed * horizontalinput) 방향바꾸기
+
+z축만 움직이고 싶을때. transform.Rotate(0,0,z) 만바꾸기 ex) 프로펠러돌아가게하기
